@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASCII TO CHARACTER</title>
+    <style>
+        #body
+        {
+            background-color: bisque;
+        }
+        #heading
+        {
+            margin-top: 100px;
+        }
+        #display
+        {
+            color:red;
+            font-size: 20px;
+            font-weight: bolder;
+        }
+
+    </style>
+</head>
+<body id="body">
+    <center>
+    <h1 style="color:red" id="heading">ASCII TO CHARACTER</h1>
+    <p style="font-weight: bold;">Enter integer code for the character: </p>
+    <form>
+        <input type="text" placeholder="Enter integer code for the character" id="integer" style="width:300px">
+        <input type="button" value="Check" onclick="clicked()">
+    </form>
+    <p id="display"></p>
+</center>
+    <script>
+        function clicked()
+        {
+            let a=document.getElementById("integer").value;
+            let b=String.fromCharCode(a);
+            document.getElementById("display").innerHTML="The corresponding ASCII character is "+"'"+b+"'";
+        }
+    </script>
+    
+</body>
+</html>
